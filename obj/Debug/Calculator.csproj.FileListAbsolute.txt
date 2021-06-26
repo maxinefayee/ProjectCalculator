@@ -7,3 +7,4 @@ D:\COLLEGE FILES\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResou
 D:\COLLEGE FILES\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 D:\COLLEGE FILES\Calculator\Calculator\obj\Debug\Calculator.exe
 D:\COLLEGE FILES\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\COLLEGE FILES\Calculator\Calculator\obj\Debug\Calculator.Form1.resources

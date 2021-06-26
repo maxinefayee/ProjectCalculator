@@ -148,6 +148,7 @@ namespace Calculator
             this.seven.TabIndex = 8;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = false;
+            this.seven.Click += new System.EventHandler(this.button_click);
             // 
             // eight
             // 
@@ -159,6 +160,7 @@ namespace Calculator
             this.eight.TabIndex = 9;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = false;
+            this.eight.Click += new System.EventHandler(this.button_click);
             // 
             // nine
             // 
@@ -170,6 +172,7 @@ namespace Calculator
             this.nine.TabIndex = 10;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = false;
+            this.nine.Click += new System.EventHandler(this.button_click);
             // 
             // multiplication
             // 
@@ -191,6 +194,7 @@ namespace Calculator
             this.four.TabIndex = 12;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = false;
+            this.four.Click += new System.EventHandler(this.button_click);
             // 
             // five
             // 
@@ -202,6 +206,7 @@ namespace Calculator
             this.five.TabIndex = 13;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = false;
+            this.five.Click += new System.EventHandler(this.button_click);
             // 
             // six
             // 
@@ -213,6 +218,7 @@ namespace Calculator
             this.six.TabIndex = 14;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = false;
+            this.six.Click += new System.EventHandler(this.button_click);
             // 
             // subtraction
             // 
@@ -234,6 +240,7 @@ namespace Calculator
             this.one.TabIndex = 16;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = false;
+            this.one.Click += new System.EventHandler(this.button_click);
             // 
             // two
             // 
@@ -245,6 +252,7 @@ namespace Calculator
             this.two.TabIndex = 17;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = false;
+            this.two.Click += new System.EventHandler(this.button_click);
             // 
             // three
             // 
@@ -256,6 +264,7 @@ namespace Calculator
             this.three.TabIndex = 18;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = false;
+            this.three.Click += new System.EventHandler(this.button_click);
             // 
             // addition
             // 
@@ -288,6 +297,7 @@ namespace Calculator
             this.zero.TabIndex = 21;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = false;
+            this.zero.Click += new System.EventHandler(this.button_click);
             // 
             // point_decimal
             // 
@@ -299,6 +309,7 @@ namespace Calculator
             this.point_decimal.TabIndex = 22;
             this.point_decimal.Text = ".";
             this.point_decimal.UseVisualStyleBackColor = false;
+            this.point_decimal.Click += new System.EventHandler(this.button_click);
             // 
             // equals
             // 
