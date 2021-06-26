@@ -14,6 +14,7 @@ namespace Calculator
     {
         String operation = "";
         Double firstnum, secondnum;
+        bool operationDone = false;
 
         public Form1()
         {
@@ -37,9 +38,9 @@ namespace Calculator
 
         private void button_click(object sender, EventArgs e)
         {
-            if (textBox_results.Text == "0")
+            if ((textBox_results.Text == "0") || (operationDone))
                 textBox_results.Clear();
-
+            operationDone = false;
             Button numbers = (Button)sender;
             textBox_results.Text = textBox_results.Text + numbers.Text;
         }
@@ -55,34 +56,51 @@ namespace Calculator
             operation = numbers.Text;
             firstnum = Double.Parse(textBox_results.Text);
             secondnum = Double.Parse(textBox_results.Text);
+            OperationLabel.Text = (firstnum, secondnum)+ "" + operation;
+            operationDone = true;
 
 
         }
 
         private void equals_Click(object sender, EventArgs e)
         {
+            secondnum = double.Parse(textBox_results.Text);
             switch(operation)
             {
                 case "+":
-                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    textBox_results.Text = Convert.ToString(firstnum + secondnum);
                     break;
 
                 case "-":
-                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    textBox_results.Text = Convert.ToString(firstnum - secondnum);
                     break;
 
                 case "*":
-                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    textBox_results.Text = Convert.ToString(firstnum * secondnum);
                     break;
 
                 case "/":
-                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    textBox_results.Text = Convert.ToString(firstnum / secondnum);
                     break;
 
                 default:
                     break;
             }
         }
+
+        private void backspace_Click(object sender, EventArgs e)
+        {
+            if (textBox_results.Text.Length > 0)
+            {
+                textBox_results.Text = textBox_results.Text.Remove(textBox_results.Text.Length - 1, 1);
+            }
+            if (textBox_results.Text == "")
+            {
+                textBox_results.Text = "0";
+            }
+        }
+
+
 
         private void clear_Click(object sender, EventArgs e)
         {

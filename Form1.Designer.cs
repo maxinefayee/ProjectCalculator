@@ -55,6 +55,7 @@ namespace Calculator
             this.equals = new System.Windows.Forms.Button();
             this.textBox_results = new System.Windows.Forms.TextBox();
             this.Calculator = new System.Windows.Forms.Label();
+            this.OperationLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // percentage
@@ -99,6 +100,7 @@ namespace Calculator
             this.backspace.TabIndex = 3;
             this.backspace.Text = "⌫";
             this.backspace.UseVisualStyleBackColor = true;
+            this.backspace.Click += new System.EventHandler(this.backspace_Click);
             // 
             // reciprocal
             // 
@@ -132,12 +134,12 @@ namespace Calculator
             // 
             // division
             // 
-            this.division.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.division.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.division.Location = new System.Drawing.Point(229, 219);
             this.division.Name = "division";
             this.division.Size = new System.Drawing.Size(72, 54);
             this.division.TabIndex = 7;
-            this.division.Text = "÷";
+            this.division.Text = "/";
             this.division.UseVisualStyleBackColor = true;
             this.division.Click += new System.EventHandler(this.Operation_click);
             // 
@@ -179,12 +181,12 @@ namespace Calculator
             // 
             // multiplication
             // 
-            this.multiplication.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.multiplication.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multiplication.Location = new System.Drawing.Point(229, 274);
             this.multiplication.Name = "multiplication";
             this.multiplication.Size = new System.Drawing.Size(72, 54);
             this.multiplication.TabIndex = 11;
-            this.multiplication.Text = "×";
+            this.multiplication.Text = "*";
             this.multiplication.UseVisualStyleBackColor = true;
             this.multiplication.Click += new System.EventHandler(this.Operation_click);
             // 
@@ -226,12 +228,12 @@ namespace Calculator
             // 
             // subtraction
             // 
-            this.subtraction.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtraction.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtraction.Location = new System.Drawing.Point(229, 329);
             this.subtraction.Name = "subtraction";
             this.subtraction.Size = new System.Drawing.Size(72, 54);
             this.subtraction.TabIndex = 15;
-            this.subtraction.Text = "—";
+            this.subtraction.Text = "-";
             this.subtraction.UseVisualStyleBackColor = true;
             this.subtraction.Click += new System.EventHandler(this.Operation_click);
             // 
@@ -351,12 +353,24 @@ namespace Calculator
             this.Calculator.TabIndex = 25;
             this.Calculator.Text = "≡  Standard";
             // 
+            // OperationLabel
+            // 
+            this.OperationLabel.AutoSize = true;
+            this.OperationLabel.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OperationLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OperationLabel.Location = new System.Drawing.Point(246, 71);
+            this.OperationLabel.Name = "OperationLabel";
+            this.OperationLabel.Size = new System.Drawing.Size(0, 20);
+            this.OperationLabel.TabIndex = 26;
+            this.OperationLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(309, 496);
+            this.Controls.Add(this.OperationLabel);
             this.Controls.Add(this.Calculator);
             this.Controls.Add(this.textBox_results);
             this.Controls.Add(this.equals);
@@ -419,6 +433,7 @@ namespace Calculator
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.TextBox textBox_results;
         private System.Windows.Forms.Label Calculator;
+        private System.Windows.Forms.Label OperationLabel;
     }
 }
 
