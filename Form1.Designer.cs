@@ -233,6 +233,7 @@ namespace Calculator
             this.subtraction.TabIndex = 15;
             this.subtraction.Text = "—";
             this.subtraction.UseVisualStyleBackColor = true;
+            this.subtraction.Click += new System.EventHandler(this.Operation_click);
             // 
             // one
             // 
@@ -279,6 +280,7 @@ namespace Calculator
             this.addition.TabIndex = 19;
             this.addition.Text = "+";
             this.addition.UseVisualStyleBackColor = true;
+            this.addition.Click += new System.EventHandler(this.Operation_click);
             // 
             // plus_minus
             // 
