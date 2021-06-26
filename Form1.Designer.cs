@@ -77,6 +77,7 @@ namespace Calculator
             this.clear_entry.TabIndex = 1;
             this.clear_entry.Text = "CE";
             this.clear_entry.UseVisualStyleBackColor = true;
+            this.clear_entry.Click += new System.EventHandler(this.clear_entry_Click);
             // 
             // clear
             // 
@@ -87,6 +88,7 @@ namespace Calculator
             this.clear.TabIndex = 2;
             this.clear.Text = "C";
             this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // backspace
             // 
@@ -326,10 +328,10 @@ namespace Calculator
             // 
             this.textBox_results.BackColor = System.Drawing.Color.Silver;
             this.textBox_results.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_results.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_results.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_results.Location = new System.Drawing.Point(10, 104);
             this.textBox_results.Name = "textBox_results";
-            this.textBox_results.Size = new System.Drawing.Size(291, 40);
+            this.textBox_results.Size = new System.Drawing.Size(291, 42);
             this.textBox_results.TabIndex = 24;
             this.textBox_results.Text = "0";
             this.textBox_results.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

@@ -12,6 +12,9 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
+        String operation = "";
+        Double firstnum, secondnum;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,7 +41,25 @@ namespace Calculator
                 textBox_results.Clear();
 
             Button numbers = (Button)sender;
-            textBox_results.Text = textBox_results.Text + numbers.Text; 
+            textBox_results.Text = textBox_results.Text + numbers.Text;
+        }
+
+        private void clear_entry_Click(object sender, EventArgs e)
+        {
+            textBox_results.Text = "0";
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            textBox_results.Text = "0";
+            String f, s;
+
+            s = Convert.ToString(firstnum);
+            f = Convert.ToString(secondnum);
+
+            s = "";
+            f = "";
+
         }
     }
 }
