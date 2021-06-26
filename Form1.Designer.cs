@@ -327,6 +327,7 @@ namespace Calculator
             this.equals.TabIndex = 23;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // textBox_results
             // 

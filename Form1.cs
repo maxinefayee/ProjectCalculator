@@ -51,7 +51,37 @@ namespace Calculator
 
         private void Operation_click(object sender, EventArgs e)
         {
+            Button numbers = (Button)sender;
+            operation = numbers.Text;
+            firstnum = Double.Parse(textBox_results.Text);
+            secondnum = Double.Parse(textBox_results.Text);
 
+
+        }
+
+        private void equals_Click(object sender, EventArgs e)
+        {
+            switch(operation)
+            {
+                case "+":
+                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    break;
+
+                case "-":
+                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    break;
+
+                case "*":
+                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    break;
+
+                case "/":
+                    textBox_results.Text = (firstnum, secondnum + Double.Parse(textBox_results.Text)).ToString();
+                    break;
+
+                default:
+                    break;
+            }
         }
 
         private void clear_Click(object sender, EventArgs e)
