@@ -42,7 +42,15 @@ namespace Calculator
                 textBox_results.Clear();
             operationDone = false;
             Button numbers = (Button)sender;
-            textBox_results.Text = textBox_results.Text + numbers.Text;
+            if (numbers.Text == ".")
+            {
+                if (!textBox_results.Text.Contains("."))
+                    textBox_results.Text = textBox_results.Text + numbers.Text;
+
+            }
+            else
+                textBox_results.Text = textBox_results.Text + numbers.Text;
+           
         }
 
         private void clear_entry_Click(object sender, EventArgs e)
@@ -100,7 +108,17 @@ namespace Calculator
             }
         }
 
-
+        private void plus_minus_Click(object sender, EventArgs e)
+        {
+            if (textBox_results.Text.Contains("-"))
+            {
+                textBox_results.Text = textBox_results.Text.Remove(0, 1);
+            }   
+            else
+            {
+                textBox_results.Text = "-" + textBox_results.Text;
+            }
+        }
 
         private void clear_Click(object sender, EventArgs e)
         {

@@ -294,6 +294,7 @@ namespace Calculator
             this.plus_minus.TabIndex = 20;
             this.plus_minus.Text = "+/-";
             this.plus_minus.UseVisualStyleBackColor = false;
+            this.plus_minus.Click += new System.EventHandler(this.plus_minus_Click);
             // 
             // zero
             // 
