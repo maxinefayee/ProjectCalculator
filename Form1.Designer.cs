@@ -139,6 +139,7 @@ namespace Calculator
             this.division.TabIndex = 7;
             this.division.Text = "÷";
             this.division.UseVisualStyleBackColor = true;
+            this.division.Click += new System.EventHandler(this.Operation_click);
             // 
             // seven
             // 
@@ -185,6 +186,7 @@ namespace Calculator
             this.multiplication.TabIndex = 11;
             this.multiplication.Text = "×";
             this.multiplication.UseVisualStyleBackColor = true;
+            this.multiplication.Click += new System.EventHandler(this.Operation_click);
             // 
             // four
             // 

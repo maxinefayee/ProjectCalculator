@@ -49,6 +49,11 @@ namespace Calculator
             textBox_results.Text = "0";
         }
 
+        private void Operation_click(object sender, EventArgs e)
+        {
+
+        }
+
         private void clear_Click(object sender, EventArgs e)
         {
             textBox_results.Text = "0";
