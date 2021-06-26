@@ -55,7 +55,16 @@ namespace Calculator
 
         private void clear_entry_Click(object sender, EventArgs e)
         {
+            
             textBox_results.Text = "0";
+            String f, s;
+
+            s = Convert.ToString(secondnum);
+            f = Convert.ToString(firstnum);
+
+            s = "";
+            f = "";
+
         }
 
         private void Operation_click(object sender, EventArgs e)
@@ -64,7 +73,7 @@ namespace Calculator
             operation = numbers.Text;
             firstnum = Double.Parse(textBox_results.Text);
             secondnum = Double.Parse(textBox_results.Text);
-            OperationLabel.Text = (firstnum, secondnum)+ "" + operation;
+            OperationLabel.Text = firstnum + "" + operation;
             operationDone = true;
 
 
@@ -120,17 +129,16 @@ namespace Calculator
             }
         }
 
+        private void square_root_Click(object sender, EventArgs e)
+        {
+            textBox_results.Text = Convert.ToString(Math.Sqrt(Convert.ToDouble(textBox_results.Text)));
+            OperationLabel.Text = firstnum + "" + operation;
+        }
+
         private void clear_Click(object sender, EventArgs e)
         {
             textBox_results.Text = "0";
-            String f, s;
-
-            s = Convert.ToString(firstnum);
-            f = Convert.ToString(secondnum);
-
-            s = "";
-            f = "";
-
+       
         }
     }
 }

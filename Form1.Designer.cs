@@ -131,6 +131,7 @@ namespace Calculator
             this.square_root.TabIndex = 6;
             this.square_root.Text = "√x";
             this.square_root.UseVisualStyleBackColor = true;
+            this.square_root.Click += new System.EventHandler(this.square_root_Click);
             // 
             // division
             // 
