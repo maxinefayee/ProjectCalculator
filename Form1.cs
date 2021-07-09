@@ -135,6 +135,16 @@ namespace Calculator
             OperationLabel.Text = firstnum + "" + operation;
         }
 
+        private void squared_Click(object sender, EventArgs e)
+        {
+            textBox_results.Text = Convert.ToString((Convert.ToDecimal(textBox_results.Text) * (Convert.ToDecimal(textBox_results.Text))));
+            OperationLabel.Text = firstnum + "" + operation;
+        }
+
+        private void reciprocal_Click(object sender, EventArgs e)
+        {
+            textBox_results.Text = Convert.ToString(1.0 / (Convert.ToDouble(textBox_results.Text))); 
+        }
         private void clear_Click(object sender, EventArgs e)
         {
             textBox_results.Text = "0";

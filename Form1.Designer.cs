@@ -111,6 +111,7 @@ namespace Calculator
             this.reciprocal.TabIndex = 4;
             this.reciprocal.Text = "1/x";
             this.reciprocal.UseVisualStyleBackColor = true;
+            this.reciprocal.Click += new System.EventHandler(this.reciprocal_Click);
             // 
             // squared
             // 
@@ -121,6 +122,7 @@ namespace Calculator
             this.squared.TabIndex = 5;
             this.squared.Text = "x²";
             this.squared.UseVisualStyleBackColor = true;
+            this.squared.Click += new System.EventHandler(this.squared_Click);
             // 
             // square_root
             // 
