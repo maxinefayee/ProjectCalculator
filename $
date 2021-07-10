@@ -1,0 +1,5 @@
+[master 2349e4a] fourteenth commit
+ 8 files changed, 45 insertions(+), 12 deletions(-)
+ rewrite bin/Debug/Calculator.exe (79%)
+ rewrite obj/Debug/Calculator.csprojAssemblyReference.cache (86%)
+ rewrite obj/Debug/Calculator.exe (79%)

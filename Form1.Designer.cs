@@ -78,7 +78,7 @@ namespace Calculator
             this.clear_entry.TabIndex = 1;
             this.clear_entry.Text = "CE";
             this.clear_entry.UseVisualStyleBackColor = true;
-            this.clear_entry.Click += new System.EventHandler(this.clear_entry_Click);
+            this.clear_entry.Click += new System.EventHandler(this.Clear_entry_Click);
             // 
             // clear
             // 
@@ -89,7 +89,7 @@ namespace Calculator
             this.clear.TabIndex = 2;
             this.clear.Text = "C";
             this.clear.UseVisualStyleBackColor = true;
-            this.clear.Click += new System.EventHandler(this.clear_Click);
+            this.clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // backspace
             // 
@@ -100,7 +100,7 @@ namespace Calculator
             this.backspace.TabIndex = 3;
             this.backspace.Text = "⌫";
             this.backspace.UseVisualStyleBackColor = true;
-            this.backspace.Click += new System.EventHandler(this.backspace_Click);
+            this.backspace.Click += new System.EventHandler(this.Backspace_Click);
             // 
             // reciprocal
             // 
@@ -111,7 +111,7 @@ namespace Calculator
             this.reciprocal.TabIndex = 4;
             this.reciprocal.Text = "1/x";
             this.reciprocal.UseVisualStyleBackColor = true;
-            this.reciprocal.Click += new System.EventHandler(this.reciprocal_Click);
+            this.reciprocal.Click += new System.EventHandler(this.Reciprocal_Click);
             // 
             // squared
             // 
@@ -122,7 +122,7 @@ namespace Calculator
             this.squared.TabIndex = 5;
             this.squared.Text = "x²";
             this.squared.UseVisualStyleBackColor = true;
-            this.squared.Click += new System.EventHandler(this.squared_Click);
+            this.squared.Click += new System.EventHandler(this.Squared_Click);
             // 
             // square_root
             // 
@@ -133,7 +133,7 @@ namespace Calculator
             this.square_root.TabIndex = 6;
             this.square_root.Text = "√x";
             this.square_root.UseVisualStyleBackColor = true;
-            this.square_root.Click += new System.EventHandler(this.square_root_Click);
+            this.square_root.Click += new System.EventHandler(this.Square_root_Click);
             // 
             // division
             // 
@@ -156,7 +156,7 @@ namespace Calculator
             this.seven.TabIndex = 8;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = false;
-            this.seven.Click += new System.EventHandler(this.button_click);
+            this.seven.Click += new System.EventHandler(this.Button_click);
             // 
             // eight
             // 
@@ -168,7 +168,7 @@ namespace Calculator
             this.eight.TabIndex = 9;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = false;
-            this.eight.Click += new System.EventHandler(this.button_click);
+            this.eight.Click += new System.EventHandler(this.Button_click);
             // 
             // nine
             // 
@@ -180,7 +180,7 @@ namespace Calculator
             this.nine.TabIndex = 10;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = false;
-            this.nine.Click += new System.EventHandler(this.button_click);
+            this.nine.Click += new System.EventHandler(this.Button_click);
             // 
             // multiplication
             // 
@@ -203,7 +203,7 @@ namespace Calculator
             this.four.TabIndex = 12;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = false;
-            this.four.Click += new System.EventHandler(this.button_click);
+            this.four.Click += new System.EventHandler(this.Button_click);
             // 
             // five
             // 
@@ -215,7 +215,7 @@ namespace Calculator
             this.five.TabIndex = 13;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = false;
-            this.five.Click += new System.EventHandler(this.button_click);
+            this.five.Click += new System.EventHandler(this.Button_click);
             // 
             // six
             // 
@@ -227,7 +227,7 @@ namespace Calculator
             this.six.TabIndex = 14;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = false;
-            this.six.Click += new System.EventHandler(this.button_click);
+            this.six.Click += new System.EventHandler(this.Button_click);
             // 
             // subtraction
             // 
@@ -250,7 +250,7 @@ namespace Calculator
             this.one.TabIndex = 16;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = false;
-            this.one.Click += new System.EventHandler(this.button_click);
+            this.one.Click += new System.EventHandler(this.Button_click);
             // 
             // two
             // 
@@ -262,7 +262,7 @@ namespace Calculator
             this.two.TabIndex = 17;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = false;
-            this.two.Click += new System.EventHandler(this.button_click);
+            this.two.Click += new System.EventHandler(this.Button_click);
             // 
             // three
             // 
@@ -274,7 +274,7 @@ namespace Calculator
             this.three.TabIndex = 18;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = false;
-            this.three.Click += new System.EventHandler(this.button_click);
+            this.three.Click += new System.EventHandler(this.Button_click);
             // 
             // addition
             // 
@@ -297,7 +297,7 @@ namespace Calculator
             this.plus_minus.TabIndex = 20;
             this.plus_minus.Text = "+/-";
             this.plus_minus.UseVisualStyleBackColor = false;
-            this.plus_minus.Click += new System.EventHandler(this.plus_minus_Click);
+            this.plus_minus.Click += new System.EventHandler(this.Plus_minus_Click);
             // 
             // zero
             // 
@@ -309,7 +309,7 @@ namespace Calculator
             this.zero.TabIndex = 21;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = false;
-            this.zero.Click += new System.EventHandler(this.button_click);
+            this.zero.Click += new System.EventHandler(this.Button_click);
             // 
             // point_decimal
             // 
@@ -321,7 +321,7 @@ namespace Calculator
             this.point_decimal.TabIndex = 22;
             this.point_decimal.Text = ".";
             this.point_decimal.UseVisualStyleBackColor = false;
-            this.point_decimal.Click += new System.EventHandler(this.button_click);
+            this.point_decimal.Click += new System.EventHandler(this.Button_click);
             // 
             // equals
             // 
@@ -333,7 +333,7 @@ namespace Calculator
             this.equals.TabIndex = 23;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
-            this.equals.Click += new System.EventHandler(this.equals_Click);
+            this.equals.Click += new System.EventHandler(this.Equals_Click);
             // 
             // textBox_results
             // 
@@ -401,6 +401,7 @@ namespace Calculator
             this.Controls.Add(this.clear);
             this.Controls.Add(this.clear_entry);
             this.Controls.Add(this.percentage);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

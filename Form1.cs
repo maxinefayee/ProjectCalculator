@@ -26,17 +26,7 @@ namespace Calculator
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_click(object sender, EventArgs e)
+        private void Button_click(object sender, EventArgs e)
         {
             if ((textBox_results.Text == "0") || (operationDone))
                 textBox_results.Clear();
@@ -50,22 +40,8 @@ namespace Calculator
             }
             else
                 textBox_results.Text = textBox_results.Text + numbers.Text;
-           
         }
 
-        private void clear_entry_Click(object sender, EventArgs e)
-        {
-            
-            textBox_results.Text = "0";
-            String f, s;
-
-            s = Convert.ToString(secondnum);
-            f = Convert.ToString(firstnum);
-
-            s = "";
-            f = "";
-
-        }
 
         private void Operation_click(object sender, EventArgs e)
         {
@@ -79,10 +55,10 @@ namespace Calculator
 
         }
 
-        private void equals_Click(object sender, EventArgs e)
+        private void Equals_Click(object sender, EventArgs e)
         {
             secondnum = double.Parse(textBox_results.Text);
-            switch(operation)
+            switch (operation)
             {
                 case "+":
                     textBox_results.Text = Convert.ToString(firstnum + secondnum);
@@ -105,19 +81,7 @@ namespace Calculator
             }
         }
 
-        private void backspace_Click(object sender, EventArgs e)
-        {
-            if (textBox_results.Text.Length > 0)
-            {
-                textBox_results.Text = textBox_results.Text.Remove(textBox_results.Text.Length - 1, 1);
-            }
-            if (textBox_results.Text == "")
-            {
-                textBox_results.Text = "0";
-            }
-        }
-
-        private void plus_minus_Click(object sender, EventArgs e)
+        private void Plus_minus_Click(object sender, EventArgs e)
         {
             if (textBox_results.Text.Contains("-"))
             {
@@ -129,26 +93,61 @@ namespace Calculator
             }
         }
 
-        private void square_root_Click(object sender, EventArgs e)
+        private void Square_root_Click(object sender, EventArgs e)
         {
             textBox_results.Text = Convert.ToString(Math.Sqrt(Convert.ToDouble(textBox_results.Text)));
             OperationLabel.Text = firstnum + "" + operation;
         }
 
-        private void squared_Click(object sender, EventArgs e)
+        private void Squared_Click(object sender, EventArgs e)
         {
             textBox_results.Text = Convert.ToString((Convert.ToDecimal(textBox_results.Text) * (Convert.ToDecimal(textBox_results.Text))));
             OperationLabel.Text = firstnum + "" + operation;
         }
 
-        private void reciprocal_Click(object sender, EventArgs e)
+        private void Reciprocal_Click(object sender, EventArgs e)
         {
-            textBox_results.Text = Convert.ToString(1.0 / (Convert.ToDouble(textBox_results.Text))); 
+            textBox_results.Text = Convert.ToString(1.0 / (Convert.ToDouble(textBox_results.Text)));
+            OperationLabel.Text = firstnum + "" + operation;
         }
-        private void clear_Click(object sender, EventArgs e)
+
+        private void Backspace_Click(object sender, EventArgs e)
+        {
+            if (textBox_results.Text.Length > 0)
+            {
+                textBox_results.Text = textBox_results.Text.Remove(textBox_results.Text.Length - 1, 1);
+            }
+            if (textBox_results.Text == "")
+            {
+                textBox_results.Text = "0";
+            }
+        }
+
+        private void Button_click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clear_entry_Click(object sender, EventArgs e)
+        {
+
+            textBox_results.Text = "0";
+            String f, s;
+
+            s = Convert.ToString(secondnum);
+            f = Convert.ToString(firstnum);
+
+            s = "";
+            f = "";
+
+        }
+        private void Clear_Click(object sender, EventArgs e)
         {
             textBox_results.Text = "0";
-       
+
         }
+
+       
+        
     }
 }
