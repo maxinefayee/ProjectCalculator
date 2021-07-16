@@ -12,9 +12,7 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        String operation = "";
-        Double firstnum, secondnum;
-        bool operationDone = false;
+        calculations method = new calculations();
 
         public Form1()
         {
@@ -28,9 +26,9 @@ namespace Calculator
 
         private void Button_click(object sender, EventArgs e)
         {
-            if ((textBox_results.Text == "0") || (operationDone))
+            if ((textBox_results.Text == "0") || (method.operationDone))
                 textBox_results.Clear();
-            operationDone = false;
+            method.operationDone = false;
             Button numbers = (Button)sender;
             if (numbers.Text == ".")
             {
@@ -46,11 +44,11 @@ namespace Calculator
         private void Operation_click(object sender, EventArgs e)
         {
             Button numbers = (Button)sender;
-            operation = numbers.Text;
-            firstnum = Double.Parse(textBox_results.Text);
-            secondnum = Double.Parse(textBox_results.Text);
-            OperationLabel.Text = firstnum + "" + operation;
-            operationDone = true;
+            method.operation = numbers.Text;
+            method.firstnum = Double.Parse(textBox_results.Text);
+            method.secondnum = Double.Parse(textBox_results.Text);
+            OperationLabel.Text = method.firstnum + "" + method.operation;
+            method.operationDone = true;
 
 
         }
@@ -58,10 +56,10 @@ namespace Calculator
         private void Equals_Click(object sender, EventArgs e)
         {
 
-            calculations.Value = textBox_results.Text;
-            calculations.results();
-            textBox_results.Text = calculations.Value;
-            calculations.operationDone = false;
+            method.Value = textBox_results.Text;
+            method.results();
+            textBox_results.Text = method.Value;
+            method.operationDone = false;
 
         }
 
@@ -80,19 +78,19 @@ namespace Calculator
         private void Square_root_Click(object sender, EventArgs e)
         {
             textBox_results.Text = Convert.ToString(Math.Sqrt(Convert.ToDouble(textBox_results.Text)));
-            OperationLabel.Text = firstnum + "" + operation;
+            OperationLabel.Text = method.firstnum + "" + method.operation;
         }
 
         private void Squared_Click(object sender, EventArgs e)
         {
             textBox_results.Text = Convert.ToString((Convert.ToDecimal(textBox_results.Text) * (Convert.ToDecimal(textBox_results.Text))));
-            OperationLabel.Text = firstnum + "" + operation;
+            OperationLabel.Text = method.firstnum + "" + method.operation;
         }
 
         private void Reciprocal_Click(object sender, EventArgs e)
         {
             textBox_results.Text = Convert.ToString(1.0 / (Convert.ToDouble(textBox_results.Text)));
-            OperationLabel.Text = firstnum + "" + operation;
+            OperationLabel.Text = method.firstnum + "" + method.operation;
         }
 
         private void Backspace_Click(object sender, EventArgs e)
@@ -113,8 +111,8 @@ namespace Calculator
             textBox_results.Text = "0";
             String f, s;
 
-            s = Convert.ToString(secondnum);
-            f = Convert.ToString(firstnum);
+            s = Convert.ToString(method.secondnum);
+            f = Convert.ToString(method.firstnum);
 
             s = "";
             f = "";

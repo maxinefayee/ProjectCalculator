@@ -11,34 +11,34 @@ namespace Calculator
         public String operation = "";
         public Double firstnum, secondnum;
         public bool operationDone = false;
-        public String Value = Double.Parse(firstnum, secondnum);
+        public String Value = 0;
 
         public void results()
         {
-            secondnum = double.Parse(textBox_results.Text);
+            secondnum = double.Parse(Value);
             switch (operation)
             {
                 case "+":
-                    textBox_results.Text = Convert.ToString(firstnum + secondnum);
+                    Value = Convert.ToString(firstnum + secondnum);
                     break;
 
                 case "-":
-                    textBox_results.Text = Convert.ToString(firstnum - secondnum);
+                    Value = Convert.ToString(firstnum - secondnum);
                     break;
 
                 case "*":
-                    textBox_results.Text = Convert.ToString(firstnum * secondnum);
+                    Value = Convert.ToString(firstnum * secondnum);
                     break;
 
                 case "/":
-                    textBox_results.Text = Convert.ToString(firstnum / secondnum);
+                    Value = Convert.ToString(firstnum / secondnum);
                     break;
 
                 default:
                     break;
 
                     operationDone = true;
-                    
+              
             }
         }
     }
