@@ -57,28 +57,12 @@ namespace Calculator
 
         private void Equals_Click(object sender, EventArgs e)
         {
-            secondnum = double.Parse(textBox_results.Text);
-            switch (operation)
-            {
-                case "+":
-                    textBox_results.Text = Convert.ToString(firstnum + secondnum);
-                    break;
 
-                case "-":
-                    textBox_results.Text = Convert.ToString(firstnum - secondnum);
-                    break;
+            calculations.Value = textBox_results.Text;
+            calculations.results();
+            textBox_results.Text = calculations.Value;
+            calculations.operationDone = false;
 
-                case "*":
-                    textBox_results.Text = Convert.ToString(firstnum * secondnum);
-                    break;
-
-                case "/":
-                    textBox_results.Text = Convert.ToString(firstnum / secondnum);
-                    break;
-
-                default:
-                    break;
-            }
         }
 
         private void Plus_minus_Click(object sender, EventArgs e)
@@ -121,11 +105,6 @@ namespace Calculator
             {
                 textBox_results.Text = "0";
             }
-        }
-
-        private void Button_click(object sender, EventArgs e)
-        {
-
         }
 
         private void Clear_entry_Click(object sender, EventArgs e)

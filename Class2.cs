@@ -11,9 +11,10 @@ namespace Calculator
         public String operation = "";
         public Double firstnum, secondnum;
         public bool operationDone = false;
+        public String Value = Double.Parse(firstnum, secondnum);
 
         public void results()
-        { 
+        {
             secondnum = double.Parse(textBox_results.Text);
             switch (operation)
             {
@@ -37,7 +38,8 @@ namespace Calculator
                     break;
 
                     operationDone = true;
-                    Value = Double.Parse(firstnum, secondnum);
+                    
             }
-    } 
+        }
+    }
 }
